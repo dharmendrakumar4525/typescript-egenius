@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { 
+   Grid, Drawer, ListItem, FormControlLabel, Switch, FormControl, CardContent, IconButton, Typography, AppBar, Divider, Card, MenuItem, Fab, CardActions, TextField, Button, Toolbar, Box, FormLabel, List, Tooltip, Slide, Checkbox, RadioGroup, Radio, InputAdornment
+  } from '@material-ui/core';
+import InputTextField from './Components/InputTextField';
+import StudentProfiling from './Components/StudentProfiling'
 
-function App() {
+interface IState {
+  currentemailId: string;
+  curentemailidError: string;
+  currentpassword: string;
+  currentPasswordError: string;
+  currentloginError: string;
+  successMessage: string;
+  isVisiblePassword: boolean;
+}
+
+
+const onInputChange=()=>{
+
+}
+const  App=()=> {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <StudentProfiling/>
     </div>
   );
 }
