@@ -10,3 +10,9 @@ export enum TextType {
     error = 'error'
 
 }
+export const personnelInformation ={
+    GenderMaster : ["Male", "Female", "Other"],
+    BloodGroupMaster : ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"],
+    NationalityMaster : ["Indian"],
+    ReligionMaster : ["Hindus", "Muslims", "Christians", "Sikhs", "Buddhists", "Jains", "Others"],
+}
