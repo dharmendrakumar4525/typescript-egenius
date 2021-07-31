@@ -17,34 +17,14 @@ import {
 
     const style = ['input-container', className].join(' '); 
 
-    const onInputChange = (e: any,coutrydata:any) =>{
-        const currentValue = e.target.value;
-        onChange(currentValue);
-      
+    const onInputChange = (e: any) =>{
+        const currentValue = e;
+        onChange(currentValue);    
     }
   return (
     <div className="body">
-     {/* <FormControl fullWidth>
-                        <TextField
-                          inputProps={{
-
-                            autoComplete: 'off',
-                            style: { textTransform: 'capitalize' }
-                          }}
-                          required
-                          disabled={false}
-                          className={style}
-                          placeholder={placeholder}
-                          id="document-type"
-                          label={label}
-                          type="number"
-                          value={value}
-                          onChange={onInputChange}
-                          variant="outlined"
-                        />
-
-                      </FormControl> */}
-                      {/* <MuiPhoneNumber defaultCountry={'in'} onChange={onInputChange} label={label} value={value}/> */}
+    
+                      <MuiPhoneNumber defaultCountry={'in'} onChange={onInputChange} label={label} value={value}/>
     </div>
   );
 }
