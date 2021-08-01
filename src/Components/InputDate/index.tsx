@@ -28,7 +28,8 @@ const InputDate= (props: IProps) => {
           label="Date of birth"
           className={className}
           inputVariant="outlined"
-          format="dd/MM/yyyy"
+          format="dd/MM/yyyy"             
+          size="small"
           value={date}
           inputProps={{ readOnly: true }}
           disableFuture={true}

@@ -9,11 +9,10 @@ import {
     label?:string;
     className?: string;
     value:any;
-    placeholder?:string;
     onChange: (value: any ) => any;
 }
   const InputPhone= (props: IProps) => {
-    const {label, className, value,placeholder, onChange } = props;
+    const {label, className, value, onChange } = props;
 
     const style = ['input-container', className].join(' '); 
 
@@ -22,9 +21,10 @@ import {
         onChange(currentValue);    
     }
   return (
-    <div className="body">
-    
-                      <MuiPhoneNumber defaultCountry={'in'} onChange={onInputChange} label={label} value={value}/>
+    <div className="">    
+      <FormControl fullWidth>
+        <MuiPhoneNumber defaultCountry={'in'} onChange={onInputChange} size="small" variant="outlined" label={label} value={value}/>
+      </FormControl>
     </div>
   );
 }

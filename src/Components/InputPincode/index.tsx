@@ -2,40 +2,31 @@ import React from 'react';
 import './style.scss';
 import { 
     FormControl, TextField
-  } from '@material-ui/core';  
+  } from '@material-ui/core';
 
   interface IProps {
     label?:string;
     className?: string;
     value?:string;
     placeholder?:string;
-    helperText?:string;
-    error? : boolean;
     onChange: (value: string ) => void;
+    helperText?:string;
+    error?:boolean;
 }
-  const InputTextField= (props: IProps) => {
-    const {label, className, value, placeholder, error, helperText, onChange } = props;
+  const InputPincode= (props: IProps) => {
+    const {label, className, value, placeholder,helperText,error, onChange } = props;
 
     const style = ['input-container', className].join(' '); 
-    // let error = false;
-    // let helperText = '';
 
     const onInputChange = (e: any) =>{
-      const currentValue = e.target.value;
-      // if(!validateCharacter(currentValue)){
-      //   console.log(currentValue+'gh');
-      //   // helperText = 'Please enter letters.';
-      //   // error = true;  
-      // }          
-      onChange(currentValue);
+        onChange(e.target.value);
     }
   return (
     <div className="">
       <FormControl fullWidth>
         <TextField
           inputProps={{
-            autoComplete: 'off',
-            style: { textTransform: 'capitalize' }
+            autoComplete: 'off'
           }}
           required
           disabled={false}
@@ -56,4 +47,4 @@ import {
   );
 }
 
-export default InputTextField;
+export default InputPincode;

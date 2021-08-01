@@ -17,7 +17,7 @@ import {
 
     const style = ['input-container', className].join(' '); 
 
-    const onInputChange = (e: any) =>{
+    const setInputChange = (e: any) =>{
         const currentValue = e.target.value;
         onChange(currentValue);
     }
@@ -30,8 +30,9 @@ import {
               label={label}
               variant="outlined"
               className={className}
-              value={value}
-              onChange={onInputChange}>
+              value={value}              
+              size="small"
+              onChange={setInputChange}>
               {DataMaster.map(option => (
               <MenuItem key={option} value={option} id={option}>
                   {option}
