@@ -261,7 +261,6 @@ class StudentProfiling extends React.Component<IProps, IState> {
                 </Grid>
                 <AdmissionDetails/>
             </>
-
         )
     }
 }
