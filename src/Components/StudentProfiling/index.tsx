@@ -210,7 +210,6 @@ class StudentProfiling extends React.Component<IProps, IState> {
 
                             <Grid container spacing={2}>
 
-
                                 {this.FirstName()}
 
                                 <Grid item xs={12} lg={4} className="py-1">
