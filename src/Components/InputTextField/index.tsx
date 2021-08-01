@@ -7,7 +7,8 @@ import {
   interface IProps {
     label?:string;
     className?: string;
-    value?:string;
+                                  // value?:string;
+    value: string ;
     placeholder?:string;
     onChange: (value: string ) => void;
 }

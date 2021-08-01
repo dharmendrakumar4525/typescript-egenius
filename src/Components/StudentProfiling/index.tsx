@@ -1,22 +1,14 @@
-import React from 'react';
-import './style.scss';
+import { Grid, Card } from '@material-ui/core';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import {
-    FormControl, TextField, Grid, Card
-} from '@material-ui/core';
-import DateFnsUtils from '@date-io/date-fns';
-import {
-    MuiPickersUtilsProvider,
-    KeyboardDatePicker
-} from '@material-ui/pickers';
-import InputTextField from '../InputTextField';
-import InputDate from '../InputDate';
 import { personnelInformation, TextType } from '../Constant/configs';
-import Header from '../Header';
 import DropDown from '../DropDown';
+import Header from '../Header';
+import InputDate from '../InputDate';
 import InputPhone from '../InputPhone'
-
-
+import InputTextField from '../InputTextField';
+import AdmissionDetails from './Admission-Details';
+import './style.scss';
+import React from 'react';
 
 
 interface IProps {
@@ -146,12 +138,6 @@ class StudentProfiling extends React.Component<IProps, IState> {
 
     public state = this.initializeState();
 
-
-
-
-
-
-
     onMiddleName = (value: string) => {
         this.setState({ currentMiddleName: value })
     }
@@ -274,6 +260,7 @@ class StudentProfiling extends React.Component<IProps, IState> {
                         </Grid>
                     </Card>
                 </Grid>
+                <AdmissionDetails/>
             </>
 
         )

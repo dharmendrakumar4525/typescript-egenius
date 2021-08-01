@@ -1,9 +1,5 @@
 import React from 'react';
 import './App.css';
-import { 
-   Grid, Drawer, ListItem, FormControlLabel, Switch, FormControl, CardContent, IconButton, Typography, AppBar, Divider, Card, MenuItem, Fab, CardActions, TextField, Button, Toolbar, Box, FormLabel, List, Tooltip, Slide, Checkbox, RadioGroup, Radio, InputAdornment
-  } from '@material-ui/core';
-import InputTextField from './Components/InputTextField';
 import StudentProfiling from './Components/StudentProfiling'
 
 interface IState {
@@ -16,10 +12,6 @@ interface IState {
   isVisiblePassword: boolean;
 }
 
-
-const onInputChange=()=>{
-
-}
 const  App=()=> {
   return (
     <div className="App">

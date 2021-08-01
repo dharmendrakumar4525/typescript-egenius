@@ -12,11 +12,12 @@ import {
 interface IProps {
     className?: string;
     date?:Date | null;
+    label?: string;
     onChange: (date: Date | null) => void;
 }
 
 const InputDate= (props: IProps) => {
-    const { className, date, onChange } = props;
+    const { className, date, label, onChange } = props;
   return (
     <div className="App">
      <FormControl fullWidth>
@@ -25,11 +26,12 @@ const InputDate= (props: IProps) => {
           autoOk
           margin="normal"
           id="date-picker-dialog"
-          label="Date of birth"
+                                  // label="Date of birth"
           className={className}
           inputVariant="outlined"
           format="dd/MM/yyyy"
           value={date}
+          label={label}
           inputProps={{ readOnly: true }}
           disableFuture={true}
           onChange={onChange}   
