@@ -40,9 +40,11 @@ import {
               value={value}              
               size="small"
               helperText={helperText}
+
               error={error}
               onChange={setInputChange}>
               {DataMaster.map(option => (
+
               <MenuItem key={option} value={option} id={option}>
                   {option}
               </MenuItem>

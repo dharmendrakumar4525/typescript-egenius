@@ -23,7 +23,7 @@ const onInputChange=()=>{
 const  App=()=> {
   return (
     <div >
-      
+
        <StudentProfiling/>
        
     </div>

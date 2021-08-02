@@ -16,7 +16,9 @@ import {
   const InputTextField= (props: IProps) => {
     const {label, className, value, placeholder, error, helperText, onChange } = props;
 
+
     const style = ['', className].join(' '); 
+
    
 
     const onInputChange = (e: any) =>{
@@ -32,6 +34,7 @@ import {
           style: {
             backgroundColor: "white"
           },
+
         }}
           inputProps={{
             autoComplete: 'off',
