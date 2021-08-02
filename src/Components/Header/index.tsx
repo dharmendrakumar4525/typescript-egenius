@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import { TextType } from '../Constant/configs';
+import { TextType } from '../Constant/config';
 
 
 interface IProps {

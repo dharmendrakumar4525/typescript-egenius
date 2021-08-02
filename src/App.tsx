@@ -22,8 +22,10 @@ const onInputChange=()=>{
 }
 const  App=()=> {
   return (
-    <div className="App">
+    <div >
+      
        <StudentProfiling/>
+       
     </div>
   );
 }
