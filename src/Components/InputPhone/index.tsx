@@ -40,7 +40,9 @@ import {
           label={label}
           value={value}/>
       </FormControl>
-      </div>
+
+    </div>
+
   );
 }
 

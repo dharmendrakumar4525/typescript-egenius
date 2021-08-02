@@ -24,7 +24,7 @@ import {
         onChange(currentValue);
     }
   return (
-    <div className="body">
+    <div className="">
      <FormControl fullWidth>
             <TextField   
               InputLabelProps={{
@@ -40,9 +40,11 @@ import {
               value={value}              
               size="small"
               helperText={helperText}
-          error={error}
+
+              error={error}
               onChange={setInputChange}>
-{DataMaster.map(option => (
+              {DataMaster.map(option => (
+
               <MenuItem key={option} value={option} id={option}>
                   {option}
               </MenuItem>
