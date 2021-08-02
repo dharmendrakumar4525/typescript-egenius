@@ -1,3 +1,5 @@
+import { constants } from "zlib";
+
 export enum TextType {
     header = 'Student Profiling',
     subHeader1='Primary Information',
@@ -8,5 +10,11 @@ export enum TextType {
     subHeader6='Supporting Documents References',
     success = 'success',
     error = 'error'
+};
 
-}
+export const personalInformation = {
+    GenderMaster : ["Male", "Female", "Other"],
+    BloodGroupMaster : ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"],
+    NationalityMaster : ["Indian"],
+    ReligionMaster : ["Hindus", "Muslims", "Christians", "Sikhs", "Buddhists", "Jains", "Others"]
+};

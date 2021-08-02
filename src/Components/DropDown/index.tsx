@@ -10,29 +10,39 @@ import {
     value?:string;
     placeholder?:string;
     DataMaster:string[];
+    helperText?:string;
+    error? : boolean;
     onChange: (value: string ) => void;
 }
   const DropDown= (props: IProps) => {
-    const {label, className, value,placeholder,DataMaster, onChange } = props;
+    const {label, className, value,placeholder,DataMaster, error, helperText, onChange } = props;
 
     const style = ['input-container', className].join(' '); 
 
-    const onInputChange = (e: any) =>{
+    const setInputChange = (e: any) =>{
         const currentValue = e.target.value;
         onChange(currentValue);
     }
   return (
     <div className="body">
      <FormControl fullWidth>
-            <TextField                        
+            <TextField   
+              InputLabelProps={{
+                style: {
+                  backgroundColor: "white"
+                },
+              }}                     
               id="outlined-select-currency"
               select
               label={label}
               variant="outlined"
               className={className}
-              value={value}
-              onChange={onInputChange}>
-              {DataMaster.map(option => (
+              value={value}              
+              size="small"
+              helperText={helperText}
+          error={error}
+              onChange={setInputChange}>
+{DataMaster.map(option => (
               <MenuItem key={option} value={option} id={option}>
                   {option}
               </MenuItem>
